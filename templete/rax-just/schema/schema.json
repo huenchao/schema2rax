@@ -1,0 +1,30 @@
+[{  
+  "name": "attrs",
+  "desc": "组件基本配置",
+  "valueType": "object",
+  "fields": [{
+      "name": "type",
+      "desc": "链接地址",
+      "defaultValue": ""
+    },
+    {
+      "name": "img",
+      "desc": "图片地址",
+      "defaultValue": ""
+    }
+  ]
+}, {
+  "name": "styles",
+  "desc": "样式配置",
+  "valueType": "object",
+  "fields": [{
+      "name": "backgroundColor",
+      "desc": "背景颜色",
+      "defaultValue": ""
+    }
+  ]
+}, {
+  "name": "data",
+  "desc": "动态数据源(推荐 返回的数据格式 data 包裹) ",
+  "relateDatasourceId": 183305
+}]

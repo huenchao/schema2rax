@@ -1,0 +1,32 @@
+{
+  "name": "udpl-2-code-rax",
+  "group": "rax",
+  "version": "@BRANCH@",
+  "type": "rax",
+  "builder": "@ali/builder-cbu-rax-component",
+  "author": "zude.hzd",
+  "options": {
+    "builderReflect": true,
+    "babel": true,
+    "devtool": "#source-map"
+  },
+  "info": {
+    "extraLib": "rax",
+    "platform": ["mobile"],
+    "project": "component",
+    "workflow": "normal"
+  },
+  "build_ignore": [
+    "./build"
+  ],
+  "just": {
+    "publish": {
+      "ocms": {
+        "enable": true
+      },
+      "roc": {
+        "enable": true
+      }
+    }
+  }
+}

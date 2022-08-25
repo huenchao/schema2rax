@@ -1,0 +1,19 @@
+{
+  "bu": "1688",
+  "device": "wap",
+  "type": "component",
+  "needClientData": true,
+  "needJs": true,
+  "needCss": false,
+  "tech": "rax1.0",
+  "logo": "https://img.alicdn.com/tfs/TB1D30DdoY1gK0jSZFCXXcwqXXa-316-302.jpg",
+  "pcLogo": "https://img.alicdn.com/tfs/TB19IJAdlv0gK0jSZKbXXbK2FXa-314-300.jpg",
+  "defaultAttr": {
+    "component-async": false,
+    "data-croco-lazyload": true
+  },
+  "schema": {
+    "type": "jdata",
+    "id": ""
+  }
+}

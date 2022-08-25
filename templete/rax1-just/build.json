@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    [
+      "@ali/just-rax-plugin-component",
+      {
+        "targets": ["web", "weex"]
+      }
+    ]
+  ],
+  "exclude": false,
+  "inlineStyle": true,
+  "devServer": {
+    "port": "9999"
+  }
+}

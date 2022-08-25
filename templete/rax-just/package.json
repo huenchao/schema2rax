@@ -1,0 +1,57 @@
+{
+  "name": "@ali/roc-mod-udpl-2-code-rax",
+  "version": "0.0.1",
+  "description": "udpl-2-code-rax",
+  "main": "index.js",
+  "scripts": {
+    "lint": "npm-ensure -t deps"
+  },
+  "keywords": [
+    "rax-mobile-normal-component"
+  ],
+  "just": {
+    "type": "component/mobile-rax",
+    "plugins": {
+      "m-rax": "*"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:rax/udpl-2-code-rax.git"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "author": {
+    "name": "zude.hzd"
+  },
+  "maintainers": [
+    {
+      "name": "kpm_admin",
+      "email": "kpm_admin@taobao.com"
+    }
+  ],
+  "dependencies": {
+    "rax": "0.x.x",
+    "@ali/rox-udpl-datasource-standard": "0.x.x"
+  },
+  "devDependencies": {
+    "rax-test-renderer": "0.x.x",
+    "npm-ensure": "^1.1.2",
+    "@ali/cox-demo-mounter": "3.x.x",
+    "@ali/rax-demo-asyc-loaddata":"1.x.x"
+  },
+  "ensure": {
+    "deps": {
+      "checkDirs": [
+        "src/**/*"
+      ],
+      "ignoreDirs": [
+        "src/__tests__/**/*"
+      ],
+      "ignores": [
+        "@weex-module/*"
+      ]
+    }
+  }
+}

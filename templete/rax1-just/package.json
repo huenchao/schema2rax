@@ -1,0 +1,58 @@
+{
+  "name": "@ali/cmod-udpl-test11",
+  "version": "0.0.2",
+  "description": "udpl测试组件",
+  "main": "lib/index.js",
+  "just": {
+    "type": "component/rax-universal-component"
+  },
+  "builder": {
+    "entry": [
+      "pages/demo/index.jsx"
+    ]
+  },
+  "scripts": {
+    "start": "rax-scripts start",
+    "build": "rax-scripts build",
+    "prepublish": "npm-ensure -t deps"
+  },
+  "ensure": {
+    "deps": {
+      "checkDirs": [
+        "*.js",
+        "*.jsx",
+        "src/**/*"
+      ],
+      "ignores": []
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:cmod/udpl-test11"
+  },
+  "keywords": [
+    "just",
+    "app",
+    "udpl-test11"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "author": {
+    "name": "ruiwang.wr",
+    "email": "ruiwang.wr@alibaba-inc.com"
+  },
+  "dependencies": {
+
+  },
+  "peerDependencies": {
+    "rax": "1.x.x"
+  },
+  "devDependencies": {
+    "npm-ensure": "*",
+    "rax-scripts": "2.x.x",
+    "@ali/just-rax-plugin-component": "0.x.x",
+    "@ali/rox-query-jdata":"0.x.x",
+    "@ali/rox-demo-bootstrap": "0.x.x"
+  }
+}

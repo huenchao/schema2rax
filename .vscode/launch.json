@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "调试egg",
+            "runtimeExecutable": "npm",
+            "runtimeArgs": [
+                "run",
+                "build",
+            ],
+            "console": "integratedTerminal",
+            "autoAttachChildProcesses": true,
+            "protocol": "auto",
+            "restart": true
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "lowcode-schema-parse-2-rax",
+  "version": "1.0.11",
+  "description": "tool for transfer rax component",
+  "main": "cli/dev.js",
+  "scripts": {
+    "build": "node bin/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "transform": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [
+    "rax"
+  ],
+  "author": "huenchao",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/generator": "^7.0.0-beta.46",
+    "@babel/helper-plugin-utils": "^7.0.0-beta.49",
+    "@babel/parser": "^7.0.0-beta.48",
+    "@babel/plugin-proposal-async-generator-functions": "^7.0.0-beta.49",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.46",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.49",
+    "@babel/plugin-syntax-class-properties": "^7.0.0-beta.49",
+    "@babel/plugin-syntax-jsx": "^7.0.0-beta.49",
+    "@babel/plugin-transform-arrow-functions": "^7.13.0",
+    "@babel/plugin-transform-destructuring": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-react": "^7.0.0-beta.46",
+    "@babel/register": "^7.0.0-beta.46",
+    "@babel/traverse": "^7.0.0-beta.46",
+    "@babel/types": "7.9.6",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-plugin-transform-es2015-destructuring": "^6.23.0",
+    "babel-plugin-transform-es2015-spread": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "make-dir": "^3.1.0",
+    "prettier": "^1.18.2"
+  }
+}

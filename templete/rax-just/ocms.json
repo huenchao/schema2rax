@@ -1,0 +1,14 @@
+{
+  "bu": "1688",
+  "device": "wap",
+  "type": "component",
+  "needClientData": true,
+  "needJs": true,
+  "needCss": false,
+  "tech": "rax",
+  "logo": "",
+  "schema": {
+    "type": "jdata",
+    "id": ""
+  }
+}

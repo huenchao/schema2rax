@@ -1,0 +1,2586 @@
+{
+	"version": "1.0.0",
+	"componentsMap": [
+		{
+			"package": "dubhePackage",
+			"exportName": "Page",
+			"subName": "",
+			"destructuring": true,
+			"main": "index.js",
+			"version": "0.0.1",
+			"npmName": "@ali/rox-dubhe-page",
+			"componentName": "Page"
+		},
+		{
+			"package": "dubhePackage",
+			"exportName": "CommonTabHeader",
+			"subName": "",
+			"destructuring": true,
+			"main": "index.js",
+			"version": "0.0.1",
+			"npmName": "@ali/rox-scorpio-common-tabheader",
+			"componentName": "CommonTabHeader"
+		},
+		{
+			"package": "dubhePackage",
+			"version": "0.0.4",
+			"exportName": "Sticky",
+			"main": "index.js",
+			"destructuring": true,
+			"subName": "",
+			"npmName": "@ali/rox-scorpio-sticky-common-view",
+			"componentName": "Sticky"
+		},
+		{
+			"package": "dubhePackage",
+			"exportName": "Image",
+			"subName": "",
+			"destructuring": true,
+			"main": "index.js",
+			"version": "0.0.6",
+			"npmName": "@ali/rox-scorpio-image",
+			"componentName": "Image"
+		},
+		{
+			"package": "dubhePackage",
+			"exportName": "Text",
+			"main": "index.js",
+			"destructuring": true,
+			"subName": "",
+			"version": "0.0.5",
+			"npmName": "@ali/rox-scorpio-text",
+			"componentName": "Text"
+		},
+		{
+			"package": "dubhePackage",
+			"exportName": "View",
+			"subName": "",
+			"destructuring": true,
+			"main": "index.js",
+			"version": "0.0.13",
+			"npmName": "@ali/rox-scorpio-view",
+			"componentName": "View"
+		},
+		{
+			"package": "dubhePackage",
+			"exportName": "List",
+			"subName": "",
+			"destructuring": true,
+			"main": "index.js",
+			"version": "0.0.3",
+			"npmName": "@ali/rox-scorpio-common-list",
+			"componentName": "List"
+		}
+	],
+	"componentsTree": [
+		{
+			"componentName": "Page",
+			"id": "node_page_root",
+			"props": {
+				"ref": "outterView",
+				"autoLoading": true,
+				"style": {
+					"padding": "0 5rpx 0 5rpx"
+				}
+			},
+			"fileName": "mock",
+			"dataSource": {
+				"list": [
+					{
+						"type": "mtop",
+						"id": "listData",
+						"isInit": false,
+						"dataHandler": {
+							"type": "JSFunction",
+							"value": "function(res) { \n    console.info(123, res.data)\n    return res.data[228962206142].listData.data.__cardList\n}"
+						},
+						"errorHandler": {
+							"type": "JSFunction",
+							"value": "function(err) {}"
+						},
+						"shouldFetch": {
+							"type": "JSFunction",
+							"value": "function() { return true; }"
+						},
+						"willFetch": {
+							"type": "JSFunction",
+							"value": "function(options) { return options; }"
+						},
+						"options": {
+							"uri": "mtop.alibaba.cbu.wireless.uniform.render.batchgetcomponentdata",
+							"method": "GET",
+							"isCors": false,
+							"timeout": 5000,
+							"dataType": "jsonp",
+							"params": {
+								"componentParams": "[{\"componentId\":\"228962206142\",\"pageId\":228962,\"spmc\":\"a262eq.24310172.ksq1vhf7.0\"}]",
+								"params": "{ \"pageNo\": \"${pageNo}\" , \"pageSize\": 10,  \"solutionId\": \"${solutionId}\" }",
+								"isGray": false
+							},
+							"headers": {
+								
+							}
+						}
+					},
+					{
+						"type": "mtop",
+						"id": "huoping",
+						"isInit": false,
+						"dataHandler": {
+							"type": "JSFunction",
+							"value": "function(res) { return res.data.result.data }"
+						},
+						"errorHandler": {
+							"type": "JSFunction",
+							"value": "function(err) {}"
+						},
+						"shouldFetch": {
+							"type": "JSFunction",
+							"value": "function() { return true; }"
+						},
+						"willFetch": {
+							"type": "JSFunction",
+							"value": "function(options) { return options; }"
+						},
+						"options": {
+							"uri": "mtop.taobao.widgetService.getJsonComponent",
+							"method": "GET",
+							"isCors": false,
+							"timeout": 5000,
+							"v": null,
+							"appKey": null,
+							"dataType": "jsonp",
+							"params": {
+								"cid": "hptfwchannel:hptfwchannel",
+								"methodName": "execute",
+								"isGray": false,
+								"params": "{\"resourceId\":\"${resourceId}\",\"pageNo\":\"${pageNo}\", \"pageSize\":8, \"topOfferIds\":\"563875451680\",\"categoryIds\":\"\",\"leafCateIds\":\"\",\"isStart\":\"Y\",\"isOpen\":true,\"type\":\"feed\",\"isUsingTopOffer\":true,\"marketingScene\":\"dcso\"}"
+							},
+							"headers": {
+								
+							}
+						}
+					}
+				]
+			},
+			"css": "body {\n  font-size: 24rpx;\n}",
+			"lifeCycles": {
+				"componentDidMount": {
+					"type": "JSFunction",
+					"value": "function() {\n    console.log('did mount');\n  }"
+				},
+				"componentWillUnmount": {
+					"type": "JSFunction",
+					"value": "function() {\n    console.log('will umount');\n  }"
+				}
+			},
+			"methods": {
+				"testFunc": {
+					"type": "JSFunction",
+					"value": "function() {\n    console.log('test func');\n  }"
+				},
+				"onClick": {
+					"type": "JSFunction",
+					"value": "function() {\n    this.setState({\n      isShowDialog: true\n    })\n  }"
+				},
+				"closeDialog": {
+					"type": "JSFunction",
+					"value": "function() {\n    this.setState({\n      isShowDialog: false\n    })\n  }"
+				}
+			},
+			"__experimental__": {
+				
+			},
+			"state": {
+				"text": "outter",
+				"isShowDialog": false,
+				"cup": {
+					"type": "JSExpression",
+					"value": "window._cup.data"
+				  },
+				"floorList": [
+					{
+						"floorTitle": "推荐",
+						"solutionId": "4997"
+					},
+					{
+						"floorTitle": "女装",
+						"solutionId": "4998"
+					},
+					{
+						"floorTitle": "配饰",
+						"solutionId": "4999"
+					},
+					{
+						"floorTitle": "内衣",
+						"solutionId": "5000"
+					},
+					{
+						"floorTitle": "童装玩具",
+						"solutionId": "5001"
+					},
+					{
+						"floorTitle": "美妆个护",
+						"solutionId": "5002"
+					},
+					{
+						"floorTitle": "男装运动",
+						"solutionId": "5003"
+					},
+					{
+						"floorTitle": "箱包",
+						"solutionId": "5004"
+					},
+					{
+						"floorTitle": "鞋靴",
+						"solutionId": "5005"
+					},
+					{
+						"floorTitle": "家纺",
+						"solutionId": "5006"
+					}
+				],
+				"tabs": [
+					{
+						"navName": "1元封顶",
+						"resourceId": "2235838"
+					},
+					{
+						"navName": "5元封顶",
+						"resourceId": "2235840"
+					},
+					{
+						"navName": "9元封顶",
+						"resourceId": "2235841"
+					},
+					{
+						"navName": "日百",
+						"resourceId": "2232340"
+					},
+					{
+						"navName": "鞋服",
+						"resourceId": "2232333"
+					},
+					{
+						"navName": "美肤",
+						"resourceId": "2232332"
+					},
+					{
+						"navName": "内衣饰品",
+						"resourceId": "2232329"
+					}
+				],
+				"data": {
+					"floorList": [
+						{
+							"solutionId": "2953",
+							"floorTitle": "全部"
+						},
+						{
+							"solutionId": "2954",
+							"floorTitle": "精选"
+						}
+					],
+					"data": {
+						"bangdanInfo": {
+							"backgroundColor": "#A35217",
+							"headerImage": "https://gw.alicdn.com/imgextra/i2/O1CN01YChRwf1FLIqUIpEoB_!!6000000000470-2-tps-1502-800.png",
+							"description": "排名根据销量及热度每日更新",
+							"solutionId": "2943",
+							"title": "全部"
+						},
+						"cardList": [
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 1009535229
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 1009535229
+									}
+								},
+								"gmv7d": 0,
+								"comments": [
+									"推荐理由：客户回头率高"
+								],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [649487296435,591453193478,651479567237],
+								"userId": 1009535229,
+								"uvCnt7d": 10365,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 1009535229,
+									"isPm": true,
+									"companyName": "温州贝尚服饰有限公司",
+									"location": "温州"
+								},
+								"buyerCnt7d": 192,
+								"payOrdByrCnt3m": "8714",
+								"catLv1Name": "童装",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=liqi168880&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN015Ww8121oUviWwrJZv_!!1009535229-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "43.8",
+										"offerId": 649487296435,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN015Ww8121oUviWwrJZv_!!1009535229-0-cib.310x310.jpg",
+										"comment": "1800+人感兴趣",
+										"maxPrice": "46.5",
+										"detailUrl": "//m.1688.com/offer/649487296435.html",
+										"title": "2021秋新款花朵马甲韩版波浪边女童毛衣V领"
+									},
+									{
+										"price": "32.0",
+										"offerId": 591453193478,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/877/003/15003300778_936583614.310x310.jpg",
+										"comment": "热销2100+件",
+										"maxPrice": "33.0",
+										"detailUrl": "//m.1688.com/offer/591453193478.html",
+										"title": "儿童连体泳衣女童宝宝裙式泳装游泳衣韩版2021新款蝴蝶结女孩泳衣"
+									},
+									{
+										"price": "34.5",
+										"offerId": 651479567237,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01YOFG5G1oUvip9rDJP_!!1009535229-0-cib.310x310.jpg",
+										"comment": "500+人感兴趣",
+										"maxPrice": "36.8",
+										"detailUrl": "//m.1688.com/offer/651479567237.html",
+										"title": "2021秋季新款女童泡泡袖针织毛衣多色内搭韩国"
+									}
+								],
+								"rank": 1,
+								"floorIndex": 0,
+								"comment": "推荐理由：客户回头率高",
+								"newRank": 1
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2210343399220
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2210343399220
+									}
+								},
+								"gmv7d": 0,
+								"comments": [
+									"推荐理由：客户回头率高"
+								],
+								"cardType": "seller_card",
+								"livingNow": true,
+								"offerIds": [638896146002,652539392948,652540972634],
+								"userId": 2210343399220,
+								"uvCnt7d": 2227,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2210343399220,
+									"isPm": false,
+									"companyName": "青岛名扬时代服饰有限公司",
+									"location": "青岛"
+								},
+								"buyerCnt7d": 36,
+								"payOrdByrCnt3m": "86",
+								"catLv1Name": "童装",
+								"linkUrl": "https://live.m.1688.com/page/playview.html?hostId=2210343399220&liveId=322699821463&spm=a262eq.8239380.0.0",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN01dqbW702HyoO5Zk80a_!!2210343399220-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "29.0",
+										"offerId": 638896146002,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01dqbW702HyoO5Zk80a_!!2210343399220-0-cib.310x310.jpg",
+										"comment": "100+人感兴趣",
+										"maxPrice": "29.0",
+										"detailUrl": "//m.1688.com/offer/638896146002.html",
+										"title": "儿童短袖长款T网纱半身裙两件套"
+									},
+									{
+										"price": "14.9",
+										"offerId": 652539392948,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01OEkt5Z2HyoQP3Izht_!!2210343399220-0-cib.310x310.jpg",
+										"comment": "10+人感兴趣",
+										"maxPrice": "14.9",
+										"detailUrl": "//m.1688.com/offer/652539392948.html",
+										"title": "棉马甲"
+									},
+									{
+										"price": "19.9",
+										"offerId": 652540972634,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN014drxyP2HyoQP36yst_!!2210343399220-0-cib.310x310.jpg",
+										"comment": "10+人感兴趣",
+										"maxPrice": "19.9",
+										"detailUrl": "//m.1688.com/offer/652540972634.html",
+										"title": "棉衣"
+									}
+								],
+								"rank": 2,
+								"floorIndex": 1,
+								"comment": "推荐理由：客户回头率高",
+								"newRank": 2
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2151407470
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2151407470
+									}
+								},
+								"gmv7d": 0,
+								"comments": [
+									"推荐理由：客户回头率高"
+								],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [564371736421,558230431001,646445568657],
+								"userId": 2151407470,
+								"uvCnt7d": 2358,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2151407470,
+									"isPm": true,
+									"companyName": "广州星灿生物科技有限公司",
+									"location": "广州"
+								},
+								"buyerCnt7d": 39,
+								"payOrdByrCnt3m": "2866",
+								"catLv1Name": "美容护肤/彩妆",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=广州星灿生物科技有限公司&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/2020/864/246/17264642468_1062099496.310x310.jpg",
+								"offerList": [
+									{
+										"price": "7.9",
+										"offerId": 564371736421,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/864/246/17264642468_1062099496.310x310.jpg",
+										"comment": "热销2万+件",
+										"maxPrice": "9.9",
+										"detailUrl": "//m.1688.com/offer/564371736421.html",
+										"title": "水润BB霜自然光感透亮保湿遮瑕粉底液持久 修颜隔离控油修容彩妆"
+									},
+									{
+										"price": "128.0",
+										"offerId": 558230431001,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/024/836/17195638420_1062099496.310x310.jpg",
+										"comment": "热销3万+件",
+										"maxPrice": "128.0",
+										"detailUrl": "//m.1688.com/offer/558230431001.html",
+										"title": "w国家专利淡化黑眼圈眼袋眼膜细纹胶原蛋白提拉紧致舒缓眼膜贴"
+									},
+									{
+										"price": "59.0",
+										"offerId": 646445568657,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01RlYHNL253JIHwfXUO_!!2151407470-0-cib.310x310.jpg",
+										"comment": "热销4500+件",
+										"maxPrice": "59.0",
+										"detailUrl": "//m.1688.com/offer/646445568657.html",
+										"title": "专利爆款挂耳V脸面膜 提拉紧致紧咬肌双下巴小v脸水凝胶面膜"
+									}
+								],
+								"rank": 3,
+								"floorIndex": 2,
+								"comment": "推荐理由：客户回头率高",
+								"newRank": 3
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2505414357
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2505414357
+									}
+								},
+								"gmv7d": 0,
+								"comments": [],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [576283943686,625685194430,520301761901],
+								"userId": 2505414357,
+								"uvCnt7d": 1321,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2505414357,
+									"isPm": true,
+									"companyName": "高阳县星辰纺织品经销部",
+									"location": "保定"
+								},
+								"buyerCnt7d": 39,
+								"payOrdByrCnt3m": "1815",
+								"catLv1Name": "家纺家饰",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=星辰纺织6001&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/2018/775/833/9274338577_1553979713.310x310.jpg",
+								"offerList": [
+									{
+										"price": "2.1",
+										"offerId": 576283943686,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2018/775/833/9274338577_1553979713.310x310.jpg",
+										"comment": "热销13万+件",
+										"maxPrice": "2.5",
+										"detailUrl": "//m.1688.com/offer/576283943686.html",
+										"title": "外贸摆地摊批发80g棉提花毛巾 跑江湖夜市成人洗脸面巾家用擦脸巾"
+									},
+									{
+										"price": "9.5",
+										"offerId": 625685194430,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/934/536/19966635439_1553979713.310x310.jpg",
+										"comment": "热销5万+件",
+										"maxPrice": "12.4",
+										"detailUrl": "//m.1688.com/offer/625685194430.html",
+										"title": "厂家批发欧式棉五层AB纱布成人枕巾家用透气柔软情侣枕头巾现货"
+									},
+									{
+										"price": "2.1",
+										"offerId": 520301761901,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01irm4lQ1i3YKeWou7J_!!2505414357-0-cib.310x310.jpg",
+										"comment": "热销7万+件",
+										"maxPrice": "2.5",
+										"detailUrl": "//m.1688.com/offer/520301761901.html",
+										"title": "地摊货毛巾劳保棉80g提花毛巾成人洗脸巾 跑江湖夜市洗澡擦脸毛巾"
+									}
+								],
+								"rank": 4,
+								"floorIndex": 3,
+								"comment": null,
+								"newRank": 4
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2201469127808
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2201469127808
+									}
+								},
+								"gmv7d": 0,
+								"comments": [],
+								"cardType": "seller_card",
+								"livingNow": true,
+								"offerIds": [596543896139,646120171139,638208657808],
+								"userId": 2201469127808,
+								"uvCnt7d": 8165,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2201469127808,
+									"isPm": true,
+									"companyName": "杭州久荣贸易有限公司",
+									"location": "杭州"
+								},
+								"buyerCnt7d": 54,
+								"payOrdByrCnt3m": "4088",
+								"catLv1Name": "童装",
+								"linkUrl": "https://live.m.1688.com/page/playview.html?hostId=2201469127808&liveId=323047154118&spm=a262eq.8239380.0.0",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/2020/997/528/17859825799_1798444253.310x310.jpg",
+								"offerList": [
+									{
+										"price": "9.9",
+										"offerId": 596543896139,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/997/528/17859825799_1798444253.310x310.jpg",
+										"comment": "热销1万+件",
+										"maxPrice": "15.9",
+										"detailUrl": "//m.1688.com/offer/596543896139.html",
+										"title": "男童短裤外穿五分裤夏装新款童装儿童中大童中裤薄款休闲韩版潮衣"
+									},
+									{
+										"price": "20.9",
+										"offerId": 646120171139,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01tiaapD27Y7ACjcqwk_!!2201469127808-0-cib.310x310.jpg",
+										"comment": "热销4200+件",
+										"maxPrice": "22.9",
+										"detailUrl": "//m.1688.com/offer/646120171139.html",
+										"title": "男童休闲中裤2021中大童裤子夏装儿童七分裤纯棉短裤外穿夏季潮品"
+									},
+									{
+										"price": "34.9",
+										"offerId": 638208657808,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01nGqvrz27Y78jmyjpi_!!2201469127808-0-cib.310x310.jpg",
+										"comment": "40+人感兴趣",
+										"maxPrice": "36.9",
+										"detailUrl": "//m.1688.com/offer/638208657808.html",
+										"title": "儿童男童皮肤风衣运动外套2021年春季上新卡通商场同款薄清爽透气"
+									}
+								],
+								"rank": 5,
+								"floorIndex": 4,
+								"comment": null,
+								"newRank": 5
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2209929912630
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2209929912630
+									}
+								},
+								"gmv7d": 0,
+								"comments": [],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [644842730813,634005280691,633145941436],
+								"userId": 2209929912630,
+								"uvCnt7d": 686,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2209929912630,
+									"isPm": false,
+									"companyName": "宿迁嘉御堂商贸有限公司",
+									"location": "宿迁"
+								},
+								"buyerCnt7d": 4,
+								"payOrdByrCnt3m": "186",
+								"catLv1Name": "日用餐厨饮具",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=杯具熊宝妈阁&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN011WzcSv1VIaKcUmTCy_!!2209929912630-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "1.5",
+										"offerId": 644842730813,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN011WzcSv1VIaKcUmTCy_!!2209929912630-0-cib.310x310.jpg",
+										"comment": "10+人感兴趣",
+										"maxPrice": "28.0",
+										"detailUrl": "//m.1688.com/offer/644842730813.html",
+										"title": "杯具熊原装配件吸管盖喝水盖直饮盖茶杯盖吸嘴吸管胶圈杯盖配件"
+									},
+									{
+										"price": "3.0",
+										"offerId": 634005280691,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01yGbN1b1oj7wyHe3C7_!!6000000005260-0-cib.310x310.jpg",
+										"comment": "50+人感兴趣",
+										"maxPrice": "21.0",
+										"detailUrl": "//m.1688.com/offer/634005280691.html",
+										"title": "韩国成人保温杯杯盖子配件弹跳盖硅胶塑料草莓红黑白脸谱色"
+									},
+									{
+										"price": "12.0",
+										"offerId": 633145941436,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/037/795/23630597730_2010204462.310x310.jpg",
+										"comment": "热销2700+件",
+										"maxPrice": "28.0",
+										"detailUrl": "//m.1688.com/offer/633145941436.html",
+										"title": "杯具熊保温杯配件吸管 杯盖原装配件儿童保温杯盖学饮杯硅胶吸嘴"
+									}
+								],
+								"rank": 6,
+								"floorIndex": 5,
+								"comment": null,
+								"newRank": 6
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 942342036
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 942342036
+									}
+								},
+								"gmv7d": 0,
+								"comments": [],
+								"cardType": "seller_card",
+								"livingNow": true,
+								"offerIds": [650584169730,633240319271,612660553157],
+								"userId": 942342036,
+								"uvCnt7d": 12629,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 942342036,
+									"isPm": true,
+									"companyName": "晋江哈比熊鞋服有限责任公司",
+									"location": "泉州"
+								},
+								"buyerCnt7d": 65,
+								"payOrdByrCnt3m": "6190",
+								"catLv1Name": "鞋",
+								"linkUrl": "https://live.m.1688.com/page/playview.html?hostId=942342036&liveId=322690705822&spm=a262eq.8239380.0.0",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN01QOYnC11QuX5GCI4LS_!!942342036-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "49.0",
+										"offerId": 650584169730,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01QOYnC11QuX5GCI4LS_!!942342036-0-cib.310x310.jpg",
+										"comment": "热销1万+件",
+										"maxPrice": "59.0",
+										"detailUrl": "//m.1688.com/offer/650584169730.html",
+										"title": "哈比熊2021秋季新款儿童单网运动鞋男童休闲跑步鞋韩女童单鞋代发"
+									},
+									{
+										"price": "29.0",
+										"offerId": 633240319271,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/641/003/23215300146_1559154722.310x310.jpg",
+										"comment": "热销9万+件",
+										"maxPrice": "49.0",
+										"detailUrl": "//m.1688.com/offer/633240319271.html",
+										"title": "哈比熊童鞋2021秋季新款女童宝宝软底儿童室内网面透气男童运动鞋"
+									},
+									{
+										"price": "29.0",
+										"offerId": 612660553157,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/088/303/17999303880_1559154722.310x310.jpg",
+										"comment": "热销9万+件",
+										"maxPrice": "39.0",
+										"detailUrl": "//m.1688.com/offer/612660553157.html",
+										"title": "哈比熊童鞋2021夏季新款女童宝宝软底儿童凉鞋男童包头沙滩鞋代发"
+									}
+								],
+								"rank": 7,
+								"floorIndex": 6,
+								"comment": null,
+								"newRank": 7
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2925453941
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 2925453941
+									}
+								},
+								"gmv7d": 0,
+								"comments": [
+									"推荐理由：客户回头率高"
+								],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [634531787456,617607285877,614238021606],
+								"userId": 2925453941,
+								"uvCnt7d": 609,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 2925453941,
+									"isPm": false,
+									"companyName": "潮州市潮安区浮洋和升陶瓷制作厂",
+									"location": "潮州"
+								},
+								"buyerCnt7d": 1,
+								"payOrdByrCnt3m": "70",
+								"catLv1Name": "日用餐厨饮具",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=和升陶瓷厂&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/2020/417/693/23532396714_1039002798.310x310.jpg",
+								"offerList": [
+									{
+										"price": "0.8",
+										"offerId": 634531787456,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/417/693/23532396714_1039002798.310x310.jpg",
+										"comment": "热销3200+件",
+										"maxPrice": "24.0",
+										"detailUrl": "//m.1688.com/offer/634531787456.html",
+										"title": "厂家直供创意日式窑变碗筷套装 北欧风餐具盘子家用小碗大碗外贸"
+									},
+									{
+										"price": "5.87",
+										"offerId": 617607285877,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/888/981/15271189888_1039002798.310x310.jpg",
+										"comment": "热销3900+件",
+										"maxPrice": "5.98",
+										"detailUrl": "//m.1688.com/offer/617607285877.html",
+										"title": "厂家货源北欧窑变釉陶瓷小碗 家用创意小清新微波炉烤箱烘焙烤盘"
+									},
+									{
+										"price": "15.3",
+										"offerId": 614238021606,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/2020/255/443/13998344552_1039002798.310x310.jpg",
+										"comment": "热销2800+件",
+										"maxPrice": "15.3",
+										"detailUrl": "//m.1688.com/offer/614238021606.html",
+										"title": "北欧风创意陶瓷餐具日式窑变釉内外色带手柄防烫家用大碗ins碗"
+									}
+								],
+								"rank": 8,
+								"floorIndex": 7,
+								"comment": "推荐理由：客户回头率高",
+								"newRank": 8
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 3077219077
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 3077219077
+									}
+								},
+								"gmv7d": 0,
+								"comments": [
+									"推荐理由：客户回头率高"
+								],
+								"cardType": "seller_card",
+								"livingNow": false,
+								"offerIds": [652664896965,652349066579,652624059152],
+								"userId": 3077219077,
+								"uvCnt7d": 3223,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 3077219077,
+									"isPm": false,
+									"companyName": "南通岚月纺织品有限公司",
+									"location": "南通"
+								},
+								"buyerCnt7d": 87,
+								"payOrdByrCnt3m": "1524",
+								"catLv1Name": "家纺家饰",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=南通月亮圆家纺&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN01t8gRxB1Bs2hLhRNwN_!!0-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "49.0",
+										"offerId": 652664896965,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01t8gRxB1Bs2hLhRNwN_!!0-0-cib.310x310.jpg",
+										"comment": "10+人感兴趣",
+										"maxPrice": "49.0",
+										"detailUrl": "//m.1688.com/offer/652664896965.html",
+										"title": "微微瑕抱枕被一个 颜色随机发不退不换"
+									},
+									{
+										"price": "139.0",
+										"offerId": 652349066579,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01jSC0TY2GvJmqoSoS3_!!3077219077-0-cib.310x310.jpg",
+										"comment": "100+人感兴趣",
+										"maxPrice": "139.0",
+										"detailUrl": "//m.1688.com/offer/652349066579.html",
+										"title": "1.5m新品花边款针织棉夏被夏凉被"
+									},
+									{
+										"price": "79.9",
+										"offerId": 652624059152,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN017Z0WUc2GvJmal6dEO_!!3077219077-0-cib.310x310.jpg",
+										"comment": "100+人感兴趣",
+										"maxPrice": "79.9",
+										"detailUrl": "//m.1688.com/offer/652624059152.html",
+										"title": "ab面卡通儿童安睡宝宝枕芯纯棉枕"
+									}
+								],
+								"rank": 9,
+								"floorIndex": 8,
+								"comment": "推荐理由：客户回头率高",
+								"newRank": 9
+							},
+							{
+								"trackInfo": {
+									"expoArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 1733791462
+									},
+									"jumpArgs": {
+										"object_type": "bangdan",
+										"object_bangdan_type": "seller_niu",
+										"object_id": 1733791462
+									}
+								},
+								"gmv7d": 0,
+								"comments": [],
+								"cardType": "seller_card",
+								"dangkou": true,
+								"livingNow": false,
+								"offerIds": [645131305021,645014380359,651479604155],
+								"userId": 1733791462,
+								"uvCnt7d": 20244,
+								"sellerInfo": {
+									"isPmPlus": false,
+									"sellerId": 1733791462,
+									"isPm": true,
+									"companyName": "广州市佳琦服饰有限公司",
+									"location": "十三行4-6层"
+								},
+								"buyerCnt7d": 77,
+								"payOrdByrCnt3m": "1133",
+								"catLv1Name": "女装",
+								"linkUrl": "https://show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=郑翠芝2013&tab=live",
+								"coverImg": "//cbu01.alicdn.com/img/ibank/O1CN01CDcnEK1Mfdj8yBtyw_!!1733791462-0-cib.310x310.jpg",
+								"offerList": [
+									{
+										"price": "108.0",
+										"offerId": 645131305021,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01CDcnEK1Mfdj8yBtyw_!!1733791462-0-cib.310x310.jpg",
+										"comment": "热销4000+件",
+										"maxPrice": "108.0",
+										"detailUrl": "//m.1688.com/offer/645131305021.html",
+										"title": "爱尚210589，连衣裙"
+									},
+									{
+										"price": "108.0",
+										"offerId": 645014380359,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01an8C8i1MfdjgvoK2C_!!1733791462-0-cib.310x310.jpg",
+										"comment": "热销1300+件",
+										"maxPrice": "118.0",
+										"detailUrl": "//m.1688.com/offer/645014380359.html",
+										"title": "2021夏季打揽方领法式泡泡袖连衣裙女设计感后背镂空收腰A字裙子"
+									},
+									{
+										"price": "49.0",
+										"offerId": 651479604155,
+										"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01kd3Vzn1MfdkA0w9e1_!!1733791462-0-cib.310x310.jpg",
+										"comment": "700+人感兴趣",
+										"maxPrice": "49.0",
+										"detailUrl": "//m.1688.com/offer/651479604155.html",
+										"title": "佳琦后开叉设计感女装2021新款秋装圆领上衣女中袖t恤女"
+									}
+								],
+								"rank": 10,
+								"floorIndex": 9,
+								"comment": null,
+								"newRank": 10
+							}
+						]
+					},
+					"success": true,
+					"__debugInfo__": {
+						"offerMap": {
+							"646445568657": {
+								"distinctId": "646445568657",
+								"price": "59.0",
+								"minPrice": "59.0",
+								"saleAmount30D": "4524",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01RlYHNL253JIHwfXUO_!!2151407470-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "59.0",
+								"title": "专利爆款挂耳V脸面膜 提拉紧致紧咬肌双下巴小v脸水凝胶面膜",
+								"offer30dUserDuv": "459",
+								"offerDetailUrl": "//m.1688.com/offer/646445568657.html",
+								"__pos__": 9,
+								"__track__": "18774797.18774797.21937883.2247.9"
+							},
+							"644842730813": {
+								"distinctId": "644842730813",
+								"price": "1.5",
+								"minPrice": "1.5",
+								"saleAmount30D": "652",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN011WzcSv1VIaKcUmTCy_!!2209929912630-0-cib.310x310.jpg",
+								"maxPrice": "28.0",
+								"title": "杯具熊原装配件吸管盖喝水盖直饮盖茶杯盖吸嘴吸管胶圈杯盖配件",
+								"offer30dUserDuv": "-1",
+								"offerDetailUrl": "//m.1688.com/offer/644842730813.html",
+								"__pos__": 16,
+								"__track__": "18774797.18774797.21937883.2247.16"
+							},
+							"645131305021": {
+								"distinctId": "645131305021",
+								"price": "108.0",
+								"minPrice": "108.0",
+								"saleAmount30D": "4099",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01CDcnEK1Mfdj8yBtyw_!!1733791462-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "108.0",
+								"title": "爱尚210589，连衣裙",
+								"offer30dUserDuv": "1516",
+								"offerDetailUrl": "//m.1688.com/offer/645131305021.html",
+								"__pos__": 28,
+								"__track__": "18774797.18774797.21937883.2247.28"
+							},
+							"596543896139": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2201469127808&liveId=323047154118&offerId=596543896139&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "男童短裤外穿五分裤夏装新款童装儿童中大童中裤薄款休闲韩版潮衣",
+								"offer30dUserDuv": "519",
+								"offerDetailUrl": "//m.1688.com/offer/596543896139.html",
+								"distinctId": "596543896139",
+								"price": "9.9",
+								"minPrice": "9.9",
+								"saleAmount30D": "13092",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/997/528/17859825799_1798444253.310x310.jpg",
+								"maxPrice": "15.9",
+								"__pos__": 13,
+								"__track__": "18774797.18774797.21937883.2247.13"
+							},
+							"646120171139": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2201469127808&liveId=323047154118&offerId=646120171139&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "男童休闲中裤2021中大童裤子夏装儿童七分裤纯棉短裤外穿夏季潮品",
+								"offer30dUserDuv": "416",
+								"offerDetailUrl": "//m.1688.com/offer/646120171139.html",
+								"distinctId": "646120171139",
+								"price": "20.9",
+								"minPrice": "20.9",
+								"saleAmount30D": "4235",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01tiaapD27Y7ACjcqwk_!!2201469127808-0-cib.310x310.jpg",
+								"maxPrice": "22.9",
+								"__pos__": 14,
+								"__track__": "18774797.18774797.21937883.2247.14"
+							},
+							"576283943686": {
+								"distinctId": "576283943686",
+								"price": "2.1",
+								"minPrice": "2.1",
+								"saleAmount30D": "134310",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2018/775/833/9274338577_1553979713.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "2.5",
+								"title": "外贸摆地摊批发80g棉提花毛巾 跑江湖夜市成人洗脸面巾家用擦脸巾",
+								"offer30dUserDuv": "1498",
+								"offerDetailUrl": "//m.1688.com/offer/576283943686.html",
+								"__pos__": 10,
+								"__track__": "18774797.18774797.21937883.2247.10"
+							},
+							"649487296435": {
+								"distinctId": "649487296435",
+								"price": "43.8",
+								"minPrice": "43.8",
+								"saleAmount30D": "507",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN015Ww8121oUviWwrJZv_!!1009535229-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "46.5",
+								"title": "2021秋新款花朵马甲韩版波浪边女童毛衣V领",
+								"offer30dUserDuv": "1850",
+								"offerDetailUrl": "//m.1688.com/offer/649487296435.html",
+								"__pos__": 1,
+								"__track__": "18774797.18774797.21937883.2247.1"
+							},
+							"651479567237": {
+								"distinctId": "651479567237",
+								"price": "34.5",
+								"minPrice": "34.5",
+								"saleAmount30D": "380",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01YOFG5G1oUvip9rDJP_!!1009535229-0-cib.310x310.jpg",
+								"maxPrice": "36.8",
+								"title": "2021秋季新款女童泡泡袖针织毛衣多色内搭韩国",
+								"offer30dUserDuv": "589",
+								"offerDetailUrl": "//m.1688.com/offer/651479567237.html",
+								"__pos__": 3,
+								"__track__": "18774797.18774797.21937883.2247.3"
+							},
+							"634005280691": {
+								"distinctId": "634005280691",
+								"price": "3.0",
+								"minPrice": "3.0",
+								"saleAmount30D": "315",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01yGbN1b1oj7wyHe3C7_!!6000000005260-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "21.0",
+								"title": "韩国成人保温杯杯盖子配件弹跳盖硅胶塑料草莓红黑白脸谱色",
+								"offer30dUserDuv": "51",
+								"offerDetailUrl": "//m.1688.com/offer/634005280691.html",
+								"__pos__": 17,
+								"__track__": "18774797.18774797.21937883.2247.17"
+							},
+							"614238021606": {
+								"distinctId": "614238021606",
+								"price": "15.3",
+								"minPrice": "15.3",
+								"saleAmount30D": "2801",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/255/443/13998344552_1039002798.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "15.3",
+								"title": "北欧风创意陶瓷餐具日式窑变釉内外色带手柄防烫家用大碗ins碗",
+								"offer30dUserDuv": "130",
+								"offerDetailUrl": "//m.1688.com/offer/614238021606.html",
+								"__pos__": 24,
+								"__track__": "18774797.18774797.21937883.2247.24"
+							},
+							"645014380359": {
+								"distinctId": "645014380359",
+								"price": "108.0",
+								"minPrice": "108.0",
+								"saleAmount30D": "1308",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01an8C8i1MfdjgvoK2C_!!1733791462-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "118.0",
+								"title": "2021夏季打揽方领法式泡泡袖连衣裙女设计感后背镂空收腰A字裙子",
+								"offer30dUserDuv": "1053",
+								"offerDetailUrl": "//m.1688.com/offer/645014380359.html",
+								"__pos__": 29,
+								"__track__": "18774797.18774797.21937883.2247.29"
+							},
+							"617607285877": {
+								"distinctId": "617607285877",
+								"price": "5.87",
+								"minPrice": "5.87",
+								"saleAmount30D": "3924",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/888/981/15271189888_1039002798.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "5.98",
+								"title": "厂家货源北欧窑变釉陶瓷小碗 家用创意小清新微波炉烤箱烘焙烤盘",
+								"offer30dUserDuv": "83",
+								"offerDetailUrl": "//m.1688.com/offer/617607285877.html",
+								"__pos__": 23,
+								"__track__": "18774797.18774797.21937883.2247.23"
+							},
+							"638208657808": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2201469127808&liveId=323047154118&offerId=638208657808&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "儿童男童皮肤风衣运动外套2021年春季上新卡通商场同款薄清爽透气",
+								"offer30dUserDuv": "45",
+								"offerDetailUrl": "//m.1688.com/offer/638208657808.html",
+								"distinctId": "638208657808",
+								"price": "34.9",
+								"minPrice": "34.9",
+								"saleAmount30D": "579",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01nGqvrz27Y78jmyjpi_!!2201469127808-0-cib.310x310.jpg",
+								"maxPrice": "36.9",
+								"__pos__": 15,
+								"__track__": "18774797.18774797.21937883.2247.15"
+							},
+							"625685194430": {
+								"distinctId": "625685194430",
+								"price": "9.5",
+								"minPrice": "9.5",
+								"saleAmount30D": "51298",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/934/536/19966635439_1553979713.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "12.4",
+								"title": "厂家批发欧式棉五层AB纱布成人枕巾家用透气柔软情侣枕头巾现货",
+								"offer30dUserDuv": "3910",
+								"offerDetailUrl": "//m.1688.com/offer/625685194430.html",
+								"__pos__": 11,
+								"__track__": "18774797.18774797.21937883.2247.11"
+							},
+							"564371736421": {
+								"distinctId": "564371736421",
+								"price": "7.9",
+								"minPrice": "7.9",
+								"saleAmount30D": "21820",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/864/246/17264642468_1062099496.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "9.9",
+								"title": "水润BB霜自然光感透亮保湿遮瑕粉底液持久 修颜隔离控油修容彩妆",
+								"offer30dUserDuv": "418",
+								"offerDetailUrl": "//m.1688.com/offer/564371736421.html",
+								"__pos__": 7,
+								"__track__": "18774797.18774797.21937883.2247.7"
+							},
+							"651479604155": {
+								"distinctId": "651479604155",
+								"price": "49.0",
+								"minPrice": "49.0",
+								"saleAmount30D": "488",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01kd3Vzn1MfdkA0w9e1_!!1733791462-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "49.0",
+								"title": "佳琦后开叉设计感女装2021新款秋装圆领上衣女中袖t恤女",
+								"offer30dUserDuv": "799",
+								"offerDetailUrl": "//m.1688.com/offer/651479604155.html",
+								"__pos__": 30,
+								"__track__": "18774797.18774797.21937883.2247.30"
+							},
+							"650584169730": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=942342036&liveId=322690705822&offerId=650584169730&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "哈比熊2021秋季新款儿童单网运动鞋男童休闲跑步鞋韩女童单鞋代发",
+								"offer30dUserDuv": "2626",
+								"offerDetailUrl": "//m.1688.com/offer/650584169730.html",
+								"distinctId": "650584169730",
+								"price": "49.0",
+								"minPrice": "49.0",
+								"saleAmount30D": "12070",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01QOYnC11QuX5GCI4LS_!!942342036-0-cib.310x310.jpg",
+								"maxPrice": "59.0",
+								"__pos__": 19,
+								"__track__": "18774797.18774797.21937883.2247.19"
+							},
+							"633145941436": {
+								"distinctId": "633145941436",
+								"price": "12.0",
+								"minPrice": "12.0",
+								"saleAmount30D": "2778",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/037/795/23630597730_2010204462.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "28.0",
+								"title": "杯具熊保温杯配件吸管 杯盖原装配件儿童保温杯盖学饮杯硅胶吸嘴",
+								"offer30dUserDuv": "130",
+								"offerDetailUrl": "//m.1688.com/offer/633145941436.html",
+								"__pos__": 18,
+								"__track__": "18774797.18774797.21937883.2247.18"
+							},
+							"638896146002": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2210343399220&liveId=322699821463&offerId=638896146002&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "儿童短袖长款T网纱半身裙两件套",
+								"offer30dUserDuv": "104",
+								"offerDetailUrl": "//m.1688.com/offer/638896146002.html",
+								"distinctId": "638896146002",
+								"price": "29.0",
+								"minPrice": "29.0",
+								"saleAmount30D": "8",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01dqbW702HyoO5Zk80a_!!2210343399220-0-cib.310x310.jpg",
+								"maxPrice": "29.0",
+								"__pos__": 4,
+								"__track__": "18774797.18774797.21937883.2247.4"
+							},
+							"652540972634": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2210343399220&liveId=322699821463&offerId=652540972634&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "棉衣",
+								"offer30dUserDuv": "2",
+								"offerDetailUrl": "//m.1688.com/offer/652540972634.html",
+								"distinctId": "652540972634",
+								"price": "19.9",
+								"minPrice": "19.9",
+								"saleAmount30D": "1",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN014drxyP2HyoQP36yst_!!2210343399220-0-cib.310x310.jpg",
+								"maxPrice": "19.9",
+								"__pos__": 6,
+								"__track__": "18774797.18774797.21937883.2247.6"
+							},
+							"558230431001": {
+								"distinctId": "558230431001",
+								"price": "128.0",
+								"minPrice": "128.0",
+								"saleAmount30D": "34558",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/024/836/17195638420_1062099496.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "128.0",
+								"title": "w国家专利淡化黑眼圈眼袋眼膜细纹胶原蛋白提拉紧致舒缓眼膜贴",
+								"offer30dUserDuv": "771",
+								"offerDetailUrl": "//m.1688.com/offer/558230431001.html",
+								"__pos__": 8,
+								"__track__": "18774797.18774797.21937883.2247.8"
+							},
+							"520301761901": {
+								"distinctId": "520301761901",
+								"price": "2.1",
+								"minPrice": "2.1",
+								"saleAmount30D": "72531",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01irm4lQ1i3YKeWou7J_!!2505414357-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "2.5",
+								"title": "地摊货毛巾劳保棉80g提花毛巾成人洗脸巾 跑江湖夜市洗澡擦脸毛巾",
+								"offer30dUserDuv": "592",
+								"offerDetailUrl": "//m.1688.com/offer/520301761901.html",
+								"__pos__": 12,
+								"__track__": "18774797.18774797.21937883.2247.12"
+							},
+							"652349066579": {
+								"distinctId": "652349066579",
+								"price": "139.0",
+								"minPrice": "139.0",
+								"saleAmount30D": "24",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01jSC0TY2GvJmqoSoS3_!!3077219077-0-cib.310x310.jpg",
+								"maxPrice": "139.0",
+								"title": "1.5m新品花边款针织棉夏被夏凉被",
+								"offer30dUserDuv": "196",
+								"offerDetailUrl": "//m.1688.com/offer/652349066579.html",
+								"__pos__": 26,
+								"__track__": "18774797.18774797.21937883.2247.26"
+							},
+							"652664896965": {
+								"distinctId": "652664896965",
+								"price": "49.0",
+								"minPrice": "49.0",
+								"saleAmount30D": "29",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01t8gRxB1Bs2hLhRNwN_!!0-0-cib.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "49.0",
+								"title": "微微瑕抱枕被一个 颜色随机发不退不换",
+								"offer30dUserDuv": "-1",
+								"offerDetailUrl": "//m.1688.com/offer/652664896965.html",
+								"__pos__": 25,
+								"__track__": "18774797.18774797.21937883.2247.25"
+							},
+							"633240319271": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=942342036&liveId=322690705822&offerId=633240319271&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "哈比熊童鞋2021秋季新款女童宝宝软底儿童室内网面透气男童运动鞋",
+								"offer30dUserDuv": "2028",
+								"offerDetailUrl": "//m.1688.com/offer/633240319271.html",
+								"distinctId": "633240319271",
+								"price": "29.0",
+								"minPrice": "29.0",
+								"saleAmount30D": "92760",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/641/003/23215300146_1559154722.310x310.jpg",
+								"maxPrice": "49.0",
+								"__pos__": 20,
+								"__track__": "18774797.18774797.21937883.2247.20"
+							},
+							"634531787456": {
+								"distinctId": "634531787456",
+								"price": "0.8",
+								"minPrice": "0.8",
+								"saleAmount30D": "3237",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/417/693/23532396714_1039002798.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "24.0",
+								"title": "厂家直供创意日式窑变碗筷套装 北欧风餐具盘子家用小碗大碗外贸",
+								"offer30dUserDuv": "309",
+								"offerDetailUrl": "//m.1688.com/offer/634531787456.html",
+								"__pos__": 22,
+								"__track__": "18774797.18774797.21937883.2247.22"
+							},
+							"652539392948": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=2210343399220&liveId=322699821463&offerId=652539392948&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "棉马甲",
+								"offer30dUserDuv": "2",
+								"offerDetailUrl": "//m.1688.com/offer/652539392948.html",
+								"distinctId": "652539392948",
+								"price": "14.9",
+								"minPrice": "14.9",
+								"saleAmount30D": "1",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN01OEkt5Z2HyoQP3Izht_!!2210343399220-0-cib.310x310.jpg",
+								"maxPrice": "14.9",
+								"__pos__": 5,
+								"__track__": "18774797.18774797.21937883.2247.5"
+							},
+							"591453193478": {
+								"distinctId": "591453193478",
+								"price": "32.0",
+								"minPrice": "32.0",
+								"saleAmount30D": "2193",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/877/003/15003300778_936583614.310x310.jpg",
+								"offerHasRefLiving": false,
+								"maxPrice": "33.0",
+								"title": "儿童连体泳衣女童宝宝裙式泳装游泳衣韩版2021新款蝴蝶结女孩泳衣",
+								"offer30dUserDuv": "2532",
+								"offerDetailUrl": "//m.1688.com/offer/591453193478.html",
+								"__pos__": 2,
+								"__track__": "18774797.18774797.21937883.2247.2"
+							},
+							"652624059152": {
+								"distinctId": "652624059152",
+								"price": "79.9",
+								"minPrice": "79.9",
+								"saleAmount30D": "25",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/O1CN017Z0WUc2GvJmal6dEO_!!3077219077-0-cib.310x310.jpg",
+								"maxPrice": "79.9",
+								"title": "ab面卡通儿童安睡宝宝枕芯纯棉枕",
+								"offer30dUserDuv": "140",
+								"offerDetailUrl": "//m.1688.com/offer/652624059152.html",
+								"__pos__": 27,
+								"__track__": "18774797.18774797.21937883.2247.27"
+							},
+							"612660553157": {
+								"offerRefLivingRoomLinkurl": "//live.m.1688.com/page/playview.html?hostId=942342036&liveId=322690705822&offerId=612660553157&spm=a262eq.8239380.0.0",
+								"offerHasRefLiving": true,
+								"title": "哈比熊童鞋2021夏季新款女童宝宝软底儿童凉鞋男童包头沙滩鞋代发",
+								"offer30dUserDuv": "4643",
+								"offerDetailUrl": "//m.1688.com/offer/612660553157.html",
+								"distinctId": "612660553157",
+								"price": "29.0",
+								"minPrice": "29.0",
+								"saleAmount30D": "96495",
+								"mainPic": "//cbu01.alicdn.com/img/ibank/2020/088/303/17999303880_1559154722.310x310.jpg",
+								"maxPrice": "39.0",
+								"__pos__": 21,
+								"__track__": "18774797.18774797.21937883.2247.21"
+							}
+						},
+						"distributionParam": {
+							"": {
+								
+							}
+						},
+						"distributionContext": {
+							"": {
+								
+							}
+						},
+						"distributionConfig": {
+							"configExcludeList": {
+								"floorType": 23
+							},
+							"operatorConfig": {
+								"solutionId": "2943",
+								"floorTitle": "全部"
+							}
+						},
+						"userRepeatRate3m": 0.3974,
+						"poolId": "95153",
+						"contextString": "{\"\":{}}",
+						"contextUserId": 0,
+						"getOffers_used": "855ms",
+						"userId": 0,
+						"getSellerModels": {
+							"942342036": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "6190",
+								"isLivingNow": true,
+								"distinctId": "942342036",
+								"userCategoryLvl1Name": "鞋",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=hibearkids",
+								"isPm": true,
+								"userRepeatRate3m": "0.1673",
+								"companyName": "晋江哈比熊鞋服有限责任公司",
+								"userCityName": "泉州",
+								"__pos__": 7,
+								"__track__": "18774797.18774797.21937883.2247.7"
+							},
+							"1009535229": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "8714",
+								"isLivingNow": false,
+								"distinctId": "1009535229",
+								"userCategoryLvl1Name": "童装",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=liqi168880",
+								"isPm": true,
+								"userRepeatRate3m": "0.3068",
+								"companyName": "温州贝尚服饰有限公司",
+								"userCityName": "温州",
+								"__pos__": 1,
+								"__track__": "18774797.18774797.21937883.2247.1"
+							},
+							"1733791462": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "1133",
+								"isLivingNow": false,
+								"sellerDangKouArea": "十三行4-6层",
+								"distinctId": "1733791462",
+								"userCategoryLvl1Name": "女装",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=郑翠芝2013",
+								"isPm": true,
+								"companyName": "广州市佳琦服饰有限公司",
+								"userCityName": "广州",
+								"__pos__": 10,
+								"__track__": "18774797.18774797.21937883.2247.10"
+							},
+							"2151407470": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "2866",
+								"isLivingNow": false,
+								"distinctId": "2151407470",
+								"userCategoryLvl1Name": "美容护肤/彩妆",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=广州星灿生物科技有限公司",
+								"isPm": true,
+								"userRepeatRate3m": "0.3225",
+								"companyName": "广州星灿生物科技有限公司",
+								"userCityName": "广州",
+								"__pos__": 3,
+								"__track__": "18774797.18774797.21937883.2247.3"
+							},
+							"2505414357": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "1815",
+								"isLivingNow": false,
+								"distinctId": "2505414357",
+								"userCategoryLvl1Name": "家纺家饰",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=星辰纺织6001",
+								"isPm": true,
+								"companyName": "高阳县星辰纺织品经销部",
+								"userCityName": "保定",
+								"__pos__": 4,
+								"__track__": "18774797.18774797.21937883.2247.4"
+							},
+							"2925453941": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "70",
+								"isLivingNow": false,
+								"distinctId": "2925453941",
+								"userCategoryLvl1Name": "日用餐厨饮具",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=和升陶瓷厂",
+								"isPm": false,
+								"userRepeatRate3m": "0.4203",
+								"companyName": "潮州市潮安区浮洋和升陶瓷制作厂",
+								"userCityName": "潮州",
+								"__pos__": 8,
+								"__track__": "18774797.18774797.21937883.2247.8"
+							},
+							"3077219077": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "1524",
+								"isLivingNow": false,
+								"distinctId": "3077219077",
+								"userCategoryLvl1Name": "家纺家饰",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=南通月亮圆家纺",
+								"isPm": false,
+								"userRepeatRate3m": "0.3974",
+								"companyName": "南通岚月纺织品有限公司",
+								"userCityName": "南通",
+								"__pos__": 9,
+								"__track__": "18774797.18774797.21937883.2247.9"
+							},
+							"2210343399220": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "86",
+								"isLivingNow": true,
+								"distinctId": "2210343399220",
+								"userCategoryLvl1Name": "童装",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=青岛天骄服饰",
+								"isPm": false,
+								"userRepeatRate3m": "0.3882",
+								"companyName": "青岛名扬时代服饰有限公司",
+								"userCityName": "青岛",
+								"__pos__": 2,
+								"__track__": "18774797.18774797.21937883.2247.2"
+							},
+							"2201469127808": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "4088",
+								"isLivingNow": true,
+								"distinctId": "2201469127808",
+								"userCategoryLvl1Name": "童装",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=久荣贸易168",
+								"isPm": true,
+								"userRepeatRate3m": "0.2415",
+								"companyName": "杭州久荣贸易有限公司",
+								"userCityName": "杭州",
+								"__pos__": 5,
+								"__track__": "18774797.18774797.21937883.2247.5"
+							},
+							"2209929912630": {
+								"isPmPlus": false,
+								"payOrdByrCnt3m": "186",
+								"isLivingNow": false,
+								"distinctId": "2209929912630",
+								"userCategoryLvl1Name": "日用餐厨饮具",
+								"streamerHomePage": "//show.1688.com/live/activity/sppfrg0x.html?__pageId__=226035&cms_id=226035&wh_pha=true&__existtitle__=1&streamerLoginId=杯具熊宝妈阁",
+								"isPm": false,
+								"companyName": "宿迁嘉御堂商贸有限公司",
+								"userCityName": "宿迁",
+								"__pos__": 6,
+								"__track__": "18774797.18774797.21937883.2247.6"
+							}
+						},
+						"getSellerModels_used": "91ms"
+					},
+					"used": "1658ms",
+					"solutionId": 2953,
+					"errorMsg": ""
+				}
+			},
+			"children": [
+				{
+					"componentName": "Sticky",
+					"id": "node_ocktmfz8rj1",
+					"props": {
+						"placeholderStyle": {
+							"gridRowEnd": "span 1",
+							"gridColumnEnd": "span 12"
+						},
+						"placeholder": "拖拽组件或模板到这里"
+					},
+					"title": "悬浮容器",
+					"children": [
+						{
+							"componentName": "CommonTabHeader",
+							"id": "node_ocktmfp6h21",
+							"props": {
+								"style": {
+									"width": 750
+								},
+								"isSticky": true,
+								"floorList": {
+									"type": "JSExpression",
+									"value": "this.state.floorList"
+								},
+								"floorId": "solutionId",
+								"floorTitle": "floorTitle",
+								"tabType": "live"
+							}
+						}
+					]
+				},
+				{
+					"componentName": "List",
+					"id": "node_ocktk0ggfh25",
+					"props": {
+						"style": {
+							"width": 750
+						},
+						"isShow": true,
+						"initResetFlag": false,
+						"firstData": {
+							"type": "JSExpression",
+							"value": "this.state.data.data.cardList"
+						},
+						"pageNumberName": "pageNo",
+						"maxPageLength": 99,
+						"pageSize": 10,
+						"bottomText": "本服务由天蝎项目组提供",
+						"isSpinOff": true,
+						"datasource": "listData",
+						"skeletonType": 2,
+						"pageLoad": true,
+						"floorList": {
+							"type": "JSExpression",
+							"value": "this.state.floorList"
+						},
+						"isTabHeader": true,
+						"floorId": "solutionId",
+						"isUnderLine": false,
+						"isSticky": true,
+						"tabType": "default"
+					},
+					"hidden": false,
+					"condition": true,
+					"children": [
+						{
+							"componentName": "View",
+							"id": "node_ocktk0ggfh24",
+							"props": {
+								"placeholderStyle": {
+									"gridRowEnd": "span 1",
+									"gridColumnEnd": "span 12"
+								},
+								"placeholder": "拖拽组件或模板到这里",
+								"style": {
+									"display": "flex",
+									"flexDirection": "row",
+									"margin": "10rpx 0"
+								}
+							},
+							"title": "容器",
+							"children": [
+								{
+									"componentName": "View",
+									"id": "node_ocktk1tga2l",
+									"props": {
+										"style": {
+											"display": "flex",
+											"position": "relative",
+											"alignItems": "flex-start",
+											"flexDirection": "row",
+											"width": "348rpx",
+											"margin": "0 15rpx"
+										}
+									},
+									"loop": {
+										"type": "JSExpression",
+										"value": "item"
+									},
+									"children": [
+										{
+											"componentName": "Image",
+											"id": "node_ocktk3iibj1",
+											"props": {
+												"url": {
+													"type": "JSExpression",
+													"value": "item.coverImg"
+												},
+												"style": {
+													"width": "348rpx",
+													"height": "440rpx",
+													"position": "absolute"
+												},
+												"lazyload": false
+											},
+											"title": "Image"
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktk1tga2m",
+											"props": {
+												"style": {
+													"display": "flex",
+													"position": "absolute",
+													"top": "0rpx",
+													"left": "0rpx",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"borderTopLeftRadius": "12rpx",
+													"borderTopRightRadius": "12rpx",
+													"width": "348rpx",
+													"height": "440rpx",
+													"overflow": "hidden"
+												}
+											},
+											"children": [
+												{
+													"componentName": "View",
+													"id": "node_ocktk1tga2n",
+													"props": {
+														"style": {
+															"display": "flex",
+															"position": "absolute",
+															"bottom": "0rpx",
+															"left": "0rpx",
+															"alignItems": "flex-start",
+															"flexDirection": "row",
+															"backgroundImage": "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.48) 100%)",
+															"width": "348rpx",
+															"height": "80rpx",
+															"overflow": "hidden",
+															"lineHeight": "30rpx",
+															"whiteSpace": "nowrap"
+														}
+													},
+													"children": [
+														{
+															"componentName": "Text",
+															"id": "node_ocktk1tga2o",
+															"props": {
+																"style": {
+																	"marginTop": "38rpx",
+																	"marginLeft": "18rpx",
+																	"maxWidth": "312rpx",
+																	"height": "30rpx",
+																	"overflow": "hidden",
+																	"textOverflow": "ellipsis",
+																	"color": "#ffffff",
+																	"fontSize": "24rpx",
+																	"fontWeight": "400rpx"
+																},
+																"content": "陈***笋正在购买",
+																"isEllipsis": false,
+																"numberLines": 1
+															}
+														}
+													]
+												},
+												{
+													"componentName": "View",
+													"id": "node_ocktk1tga2p",
+													"props": {
+														"style": {
+															"display": "flex",
+															"position": "absolute",
+															"top": "18rpx",
+															"left": "18rpx",
+															"alignItems": "center",
+															"flexDirection": "row",
+															"backgroundSize": "contain",
+															"backgroundImage": "url(https://img.alicdn.com/imgextra/i3/O1CN01LsmLEf1dHgVTgJn65_!!6000000003711-2-tps-312-72.png)",
+															"width": "156rpx"
+														}
+													},
+													"children": [
+														{
+															"componentName": "View",
+															"id": "node_ocktk1tga2q",
+															"props": {
+																"style": {
+																	"display": "flex",
+																	"alignItems": "center",
+																	"flexDirection": "row",
+																	"justifyContent": "center",
+																	"marginRight": "4rpx",
+																	"borderTopLeftRadius": "6rpx",
+																	"borderBottomLeftRadius": "6rpx",
+																	"backgroundImage": "radial-gradient(0% 0%, #FF8423 0%, #FE2BAD 33%, #FF2F69 100%)",
+																	"width": "36rpx",
+																	"height": "36rpx"
+																}
+															},
+															"children": [
+																{
+																	"componentName": "Image",
+																	"id": "node_ocktk1tga2r",
+																	"props": {
+																		"style": {
+																			"width": "20rpx",
+																			"height": "12rpx"
+																		},
+																		"url": "https://img.alicdn.com/imgextra/i2/O1CN01doj7ed1qxRchrLRH0_!!6000000005562-2-tps-40-24.png"
+																	}
+																}
+															]
+														},
+														{
+															"componentName": "Text",
+															"id": "node_ocktk1tga2s",
+															"props": {
+																"style": {
+																	"lineHeight": "22rpx",
+																	"whiteSpace": "pre",
+																	"color": "#ffffff",
+																	"fontSize": "22rpx",
+																	"fontWeight": "400rpx"
+																},
+																"content": "15.7w 观看",
+																"isEllipsis": false,
+																"numberLines": 1
+															}
+														}
+													]
+												}
+											]
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktk1tga2t",
+											"props": {
+												"style": {
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "flex-start",
+													"flexDirection": "column",
+													"marginTop": "440rpx",
+													"borderBottomLeftRadius": "12rpx",
+													"borderBottomRightRadius": "12rpx",
+													"backgroundColor": "#FFFFFF",
+													"width": "348rpx",
+													"height": "174rpx"
+												}
+											},
+											"children": [
+												{
+													"componentName": "Text",
+													"id": "node_ocktk1tga2u",
+													"props": {
+														"style": {
+															"position": "relative",
+															"marginTop": "18rpx",
+															"marginLeft": "18rpx",
+															"maxWidth": "312rpx",
+															"height": "36rpx",
+															"overflow": "hidden",
+															"textOverflow": "ellipsis",
+															"lineHeight": "36rpx",
+															"whiteSpace": "pre",
+															"color": "#283241",
+															"fontSize": "30rpx",
+															"fontWeight": "500rpx"
+														},
+														"content": {
+															"type": "JSExpression",
+															"value": "item.sellerInfo.companyName"
+														},
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												},
+												{
+													"componentName": "View",
+													"id": "node_ocktk1tga2v",
+													"props": {
+														"style": {
+															"display": "flex",
+															"position": "relative",
+															"alignItems": "center",
+															"flexDirection": "row",
+															"marginTop": "12rpx",
+															"marginLeft": "18rpx",
+															"height": "28rpx"
+														}
+													},
+													"children": [
+														{
+															"componentName": "View",
+															"id": "node_ocktk1tga2w",
+															"props": {
+																"style": {
+																	"display": "flex",
+																	"alignItems": "flex-start",
+																	"flexDirection": "row",
+																	"justifyContent": "center",
+																	"marginRight": "6rpx",
+																	"borderRadius": "4rpx",
+																	"backgroundColor": "#333333",
+																	"overflow": "hidden"
+																}
+															},
+															"children": [
+																{
+																	"componentName": "Image",
+																	"id": "node_ocktk1tga2x",
+																	"props": {
+																		"style": {
+																			"width": "24rpx",
+																			"height": "24rpx"
+																		},
+																		"url": "https://img.alicdn.com/imgextra/i1/O1CN01aTvBSs1pnzq1wEKJ6_!!6000000005406-2-tps-48-48.png"
+																	}
+																}
+															]
+														},
+														{
+															"componentName": "Text",
+															"id": "node_ocktk1tga2y",
+															"props": {
+																"style": {
+																	"overflow": "hidden",
+																	"textOverflow": "ellipsis",
+																	"lineHeight": "22rpx",
+																	"whiteSpace": "nowrap",
+																	"color": "#89919d",
+																	"fontSize": "22rpx",
+																	"fontWeight": "400rpx"
+																},
+																"content": "清河县初润羊绒制品有限…",
+																"isEllipsis": false,
+																"numberLines": 1
+															}
+														}
+													]
+												},
+												{
+													"componentName": "View",
+													"id": "node_ocktk1tga2z",
+													"props": {
+														"style": {
+															"display": "flex",
+															"position": "relative",
+															"alignItems": "center",
+															"flexDirection": "row",
+															"marginTop": "18rpx",
+															"marginLeft": "18rpx",
+															"borderRadius": "6rpx",
+															"backgroundImage": "linear-gradient(-45deg, #EB1872 0%, #FF004B 100%)",
+															"width": "200rpx",
+															"overflow": "hidden"
+														}
+													},
+													"children": [
+														{
+															"componentName": "Image",
+															"id": "node_ocktk1tga210",
+															"props": {
+																"style": {
+																	"position": "absolute",
+																	"top": "0rpx",
+																	"right": "-2rpx",
+																	"width": "44rpx",
+																	"height": "42rpx"
+																},
+																"url": "https://img.alicdn.com/imgextra/i2/O1CN01TkWRpz1shX5wOcE4D_!!6000000005798-2-tps-88-88.png"
+															}
+														},
+														{
+															"componentName": "View",
+															"id": "node_ocktk1tga211",
+															"props": {
+																"style": {
+																	"display": "flex",
+																	"position": "relative",
+																	"alignItems": "center",
+																	"flexDirection": "row",
+																	"justifyContent": "center",
+																	"marginRight": "10rpx",
+																	"width": "68rpx",
+																	"height": "44rpx"
+																}
+															},
+															"children": [
+																{
+																	"componentName": "Image",
+																	"id": "node_ocktk1tga212",
+																	"props": {
+																		"style": {
+																			"position": "absolute",
+																			"top": "0rpx",
+																			"left": "0rpx",
+																			"width": "68rpx",
+																			"height": "44rpx"
+																		},
+																		"url": "https://img.alicdn.com/imgextra/i3/O1CN01cujBvv1e3JhD3iH92_!!6000000003815-2-tps-136-88.png"
+																	}
+																},
+																{
+																	"componentName": "Image",
+																	"id": "node_ocktk1tga213",
+																	"props": {
+																		"style": {
+																			"position": "relative",
+																			"width": "42rpx",
+																			"height": "20rpx"
+																		},
+																		"url": "https://img.alicdn.com/imgextra/i2/O1CN01nP3OuX1GtwQYpdf8n_!!6000000000681-2-tps-84-40.png"
+																	}
+																}
+															]
+														},
+														{
+															"componentName": "Text",
+															"id": "node_ocktk1tga214",
+															"props": {
+																"style": {
+																	"position": "relative",
+																	"lineHeight": "26rpx",
+																	"whiteSpace": "nowrap",
+																	"color": "#ffffff",
+																	"fontSize": "26rpx",
+																	"fontWeight": "500rpx"
+																},
+																"content": "00:23:59",
+																"isEllipsis": false,
+																"numberLines": 1
+															}
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"componentName": "List",
+					"id": "node_ocktlbhbu2v",
+					"props": {
+						"style": {
+							"width": 750
+						},
+						"isSticky": true,
+						"floorList": {
+							"type": "JSExpression",
+							"value": "this.state.tabs"
+						},
+						"isShow": true,
+						"initResetFlag": false,
+						"firstData": "",
+						"pageNumberName": "pageNo",
+						"maxPageLength": 99,
+						"pageSize": 8,
+						"bottomText": "本服务由天蝎项目组提供",
+						"isTabHeader": true,
+						"floorId": "resourceId",
+						"datasource": "huoping",
+						"pageLoad": true,
+						"isShowBottom": false,
+						"floorTitle": "navName",
+						"tabType": "default"
+					},
+					"condition": false,
+					"children": [
+						{
+							"componentName": "View",
+							"id": "node_ocktlbhbu21",
+							"props": {
+								"style": {
+									"display": "flex",
+									"position": "relative",
+									"alignItems": "flex-start",
+									"flexDirection": "row"
+								}
+							},
+							"children": [
+								{
+									"componentName": "View",
+									"id": "node_ocktlbhbu22",
+									"props": {
+										"style": {
+											"position": "absolute",
+											"top": "18rpx",
+											"left": "18rpx",
+											"borderRadius": "12rpx",
+											"backgroundColor": "#89919D",
+											"width": "268rpx",
+											"height": "268rpx",
+											"overflow": "hidden"
+										}
+									}
+								},
+								{
+									"componentName": "View",
+									"id": "node_ocktlbhbu23",
+									"props": {
+										"style": {
+											"display": "flex",
+											"position": "relative",
+											"alignItems": "flex-start",
+											"flexDirection": "row",
+											"marginTop": "286rpx",
+											"borderTopLeftRadius": "1rpx",
+											"borderTopRightRadius": "1rpx",
+											"borderBottomLeftRadius": "12rpx",
+											"borderBottomRightRadius": "12rpx",
+											"backgroundColor": "#FFDFE7",
+											"width": "714rpx",
+											"height": "66rpx",
+											"lineHeight": "30rpx",
+											"whiteSpace": "pre"
+										}
+									},
+									"children": [
+										{
+											"componentName": "Text",
+											"id": "node_ocktlbhbu24",
+											"props": {
+												"style": {
+													"marginTop": "24rpx",
+													"marginLeft": "19rpx",
+													"maxWidth": "676rpx",
+													"height": "30rpx",
+													"overflow": "hidden",
+													"textOverflow": "ellipsis",
+													"color": "#ff0040",
+													"fontSize": "24rpx",
+													"fontWeight": "400rpx"
+												},
+												"content": "微商 L5 熊**布：做工不错",
+												"isEllipsis": false,
+												"numberLines": 1
+											}
+										}
+									]
+								},
+								{
+									"componentName": "View",
+									"id": "node_ocktlbhbu25",
+									"props": {
+										"style": {
+											"display": "flex",
+											"position": "absolute",
+											"top": "0rpx",
+											"left": "0rpx",
+											"alignItems": "flex-start",
+											"flexDirection": "column",
+											"borderRadius": "12rpx",
+											"backgroundColor": "#FEFFFF",
+											"width": "714rpx",
+											"height": "304rpx"
+										}
+									},
+									"children": [
+										{
+											"componentName": "Text",
+											"id": "node_ocktlbhbu26",
+											"props": {
+												"style": {
+													"position": "relative",
+													"marginTop": "32rpx",
+													"marginLeft": "304rpx",
+													"maxWidth": "620rpx",
+													"height": "40rpx",
+													"overflow": "hidden",
+													"textOverflow": "ellipsis",
+													"lineHeight": "40rpx",
+													"letterSpacing": "1.00rpx",
+													"whiteSpace": "nowrap",
+													"color": "#222222",
+													"fontSize": "32rpx",
+													"fontWeight": "600rpx"
+												},
+												"content": "第七季植绒印花富贵黑…",
+												"isEllipsis": false,
+												"numberLines": 1
+											}
+										},
+										{
+											"componentName": "Text",
+											"id": "node_ocktlbhbu27",
+											"props": {
+												"style": {
+													"position": "relative",
+													"marginTop": "2rpx",
+													"marginLeft": "304rpx",
+													"maxWidth": "256rpx",
+													"height": "28rpx",
+													"overflow": "hidden",
+													"textOverflow": "ellipsis",
+													"lineHeight": "28rpx",
+													"letterSpacing": "0.79rpx",
+													"whiteSpace": "pre",
+													"color": "#89919d",
+													"fontSize": "22rpx",
+													"fontWeight": "400rpx"
+												},
+												"content": "高街 | 无痕 | 黑色",
+												"isEllipsis": false,
+												"numberLines": 1
+											}
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktlbhbu28",
+											"props": {
+												"style": {
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"marginTop": "22rpx",
+													"marginLeft": "304rpx",
+													"borderRadius": "22rpx",
+													"backgroundImage": "linear-gradient(270deg, #FFFFFF 0%, #FF5534 100%)",
+													"width": "229rpx",
+													"height": "44rpx"
+												}
+											},
+											"children": [
+												{
+													"componentName": "View",
+													"id": "node_ocktlbhbu29",
+													"props": {
+														"style": {
+															"display": "flex",
+															"position": "relative",
+															"alignItems": "center",
+															"flexDirection": "row",
+															"justifyContent": "center",
+															"marginTop": "-2rpx",
+															"marginRight": "12rpx",
+															"marginLeft": "8rpx",
+															"width": "28rpx",
+															"height": "28rpx"
+														}
+													},
+													"children": [
+														{
+															"componentName": "Image",
+															"id": "node_ocktlbhbu2a",
+															"props": {
+																"style": {
+																	"position": "absolute",
+																	"top": "0rpx",
+																	"left": "0rpx",
+																	"width": "28rpx",
+																	"height": "28rpx"
+																},
+																"url": "https://img.alicdn.com/imgextra/i1/O1CN01Dn81wj25UKgUmVn6k_!!6000000007529-2-tps-56-56.png"
+															}
+														},
+														{
+															"componentName": "View",
+															"id": "node_ocktlbhbu2b",
+															"props": {
+																"style": {
+																	"display": "flex",
+																	"position": "relative",
+																	"alignItems": "center",
+																	"flexDirection": "row",
+																	"justifyContent": "center",
+																	"marginTop": "2rpx",
+																	"borderWidth": "2rpx",
+																	"borderStyle": "solid",
+																	"borderRadius": "2rpx",
+																	"borderColor": "#FEFFFF",
+																	"width": "16rpx",
+																	"height": "14rpx"
+																}
+															},
+															"children": [
+																{
+																	"componentName": "Image",
+																	"id": "node_ocktlbhbu2c",
+																	"props": {
+																		"style": {
+																			"marginTop": "-5rpx",
+																			"width": "12rpx",
+																			"height": "11rpx"
+																		},
+																		"url": "https://img.alicdn.com/imgextra/i2/O1CN019z040g1mLeThoLjbG_!!6000000004938-2-tps-24-26.png"
+																	}
+																}
+															]
+														}
+													]
+												},
+												{
+													"componentName": "Text",
+													"id": "node_ocktlbhbu2d",
+													"props": {
+														"style": {
+															"lineHeight": "22rpx",
+															"whiteSpace": "nowrap",
+															"color": "#ff5534",
+															"fontSize": "22rpx",
+															"fontWeight": "400rpx"
+														},
+														"content": "3天前上架",
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												}
+											]
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktlbhbu2e",
+											"props": {
+												"style": {
+													"boxSizing": "border-box",
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"marginTop": "12rpx",
+													"marginLeft": "304rpx",
+													"borderRadius": "22rpx",
+													"backgroundImage": "linear-gradient(270deg, #FFFFFF 0%, #FFB034 100%)",
+													"paddingRight": "41rpx",
+													"paddingLeft": "8rpx",
+													"height": "44rpx"
+												}
+											},
+											"children": [
+												{
+													"componentName": "Image",
+													"id": "node_ocktlbhbu2f",
+													"props": {
+														"style": {
+															"width": "28rpx",
+															"height": "28rpx"
+														},
+														"url": "https://img.alicdn.com/imgextra/i3/O1CN01vr6Kgs1svjNFc2g7H_!!6000000005829-2-tps-56-56.png"
+													}
+												},
+												{
+													"componentName": "Text",
+													"id": "node_ocktlbhbu2g",
+													"props": {
+														"style": {
+															"marginLeft": "12rpx",
+															"lineHeight": "22rpx",
+															"whiteSpace": "pre",
+															"color": "#ff7a21",
+															"fontSize": "22rpx",
+															"fontWeight": "400rpx"
+														},
+														"content": "超过 700+ 买家感兴趣",
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												}
+											]
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktlbhbu2h",
+											"props": {
+												"style": {
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"marginTop": "18rpx",
+													"marginLeft": "304rpx"
+												}
+											},
+											"children": [
+												{
+													"componentName": "Text",
+													"id": "node_ocktlbhbu2i",
+													"props": {
+														"style": {
+															"marginRight": "108rpx",
+															"lineHeight": "36rpx",
+															"whiteSpace": "pre",
+															"color": "#222222",
+															"fontSize": "36rpx",
+															"fontWeight": "600rpx"
+														},
+														"content": "¥ 64.00",
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												},
+												{
+													"componentName": "View",
+													"id": "node_ocktlbhbu2j",
+													"props": {
+														"style": {
+															"boxSizing": "border-box",
+															"display": "flex",
+															"alignItems": "center",
+															"flexDirection": "row",
+															"borderRadius": "22rpx",
+															"paddingRight": "16rpx",
+															"paddingLeft": "16rpx",
+															"height": "44rpx",
+															"boxShadow": "0 4px 8px 0 rgba(255,0,57,0.40)",
+															"backgroundImage": "linear-gradient(270deg, #FF0040 0%, #FF4D79 100%)"
+														}
+													},
+													"children": [
+														{
+															"componentName": "Image",
+															"id": "node_ocktlbhbu2k",
+															"props": {
+																"style": {
+																	"width": "20rpx",
+																	"height": "12rpx"
+																},
+																"url": "https://img.alicdn.com/imgextra/i4/O1CN01T6PAlc2A7xPl7oBrg_!!6000000008157-2-tps-40-24.png"
+															}
+														},
+														{
+															"componentName": "Text",
+															"id": "node_ocktlbhbu2l",
+															"props": {
+																"style": {
+																	"marginLeft": "6rpx",
+																	"lineHeight": "24rpx",
+																	"whiteSpace": "nowrap",
+																	"color": "#ffffff",
+																	"fontSize": "24rpx",
+																	"fontWeight": "400rpx"
+																},
+																"content": "进入直播",
+																"isEllipsis": false,
+																"numberLines": 1
+															}
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"componentName": "Image",
+									"id": "node_ocktlbhbu2m",
+									"props": {
+										"style": {
+											"position": "absolute",
+											"bottom": "-9rpx",
+											"left": "-44rpx",
+											"width": "309rpx",
+											"height": "425rpx"
+										},
+										"url": "https://img.alicdn.com/imgextra/i4/O1CN01Wjtysq1HWPhBMfE4G_!!6000000000765-2-tps-618-850.png"
+									}
+								},
+								{
+									"componentName": "View",
+									"id": "node_ocktlbhbu2n",
+									"props": {
+										"style": {
+											"display": "flex",
+											"position": "absolute",
+											"top": "18rpx",
+											"left": "16rpx",
+											"alignItems": "flex-start",
+											"flexDirection": "row",
+											"width": "284rpx",
+											"height": "284rpx"
+										}
+									},
+									"children": [
+										{
+											"componentName": "Image",
+											"id": "node_ocktlbhbu2o",
+											"props": {
+												"style": {
+													"position": "absolute",
+													"top": "0rpx",
+													"left": "0rpx",
+													"width": "284rpx",
+													"height": "284rpx"
+												},
+												"url": "https://img.alicdn.com/imgextra/i2/O1CN01ah8ctn1cqf8XKJljK_!!6000000003652-2-tps-568-568.png"
+											}
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktlbhbu2p",
+											"props": {
+												"style": {
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"marginRight": "70rpx",
+													"marginLeft": "20rpx",
+													"backgroundSize": "contain",
+													"backgroundImage": "url(https://img.alicdn.com/imgextra/i4/O1CN01uauPhc22Ivyn5CR6N_!!6000000007098-2-tps-96-132.png)"
+												}
+											},
+											"children": [
+												{
+													"componentName": "Text",
+													"id": "node_ocktlbhbu2q",
+													"props": {
+														"style": {
+															"position": "absolute",
+															"top": "16rpx",
+															"left": "14rpx",
+															"lineHeight": "40rpx",
+															"whiteSpace": "nowrap",
+															"color": "#ffffff",
+															"fontSize": "32rpx",
+															"fontWeight": "500rpx"
+														},
+														"content": "3",
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												},
+												{
+													"componentName": "Image",
+													"id": "node_ocktlbhbu2r",
+													"props": {
+														"style": {
+															"position": "relative",
+															"marginTop": "4rpx",
+															"marginLeft": "2rpx",
+															"width": "46rpx",
+															"height": "62rpx"
+														},
+														"url": "https://img.alicdn.com/imgextra/i3/O1CN012bO4Uh28po6Rg0eCD_!!6000000007982-2-tps-92-126.png"
+													}
+												}
+											]
+										},
+										{
+											"componentName": "View",
+											"id": "node_ocktlbhbu2s",
+											"props": {
+												"style": {
+													"boxSizing": "border-box",
+													"display": "flex",
+													"position": "relative",
+													"alignItems": "center",
+													"flexDirection": "row",
+													"marginTop": "18rpx",
+													"borderRadius": "6rpx",
+													"backgroundImage": "radial-gradient(0% 0%, #FF8423 0%, #FE2BAD 33%, #FF2F69 100%)",
+													"paddingRight": "8rpx",
+													"paddingLeft": "8rpx",
+													"height": "36rpx"
+												}
+											},
+											"children": [
+												{
+													"componentName": "Image",
+													"id": "node_ocktlbhbu2t",
+													"props": {
+														"style": {
+															"width": "20rpx",
+															"height": "12rpx"
+														},
+														"url": "https://img.alicdn.com/imgextra/i3/O1CN013MoiFX1NLmC2lWIyQ_!!6000000001554-2-tps-40-24.png"
+													}
+												},
+												{
+													"componentName": "Text",
+													"id": "node_ocktlbhbu2u",
+													"props": {
+														"style": {
+															"marginLeft": "12rpx",
+															"lineHeight": "22rpx",
+															"whiteSpace": "nowrap",
+															"color": "#ffffff",
+															"fontSize": "22rpx",
+															"fontWeight": "400rpx"
+														},
+														"content": "直播中",
+														"isEllipsis": false,
+														"numberLines": 1
+													}
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"i18n": {
+		
+	},
+	"verison": "1.0.0"
+}

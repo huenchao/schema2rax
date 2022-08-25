@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+  <title>Rox 跨端模块</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+  <meta name="data-spm" content="spmA" />
+  <meta name="aplus-waiting" content="MAN">
+  <meta name="aplus-terminal" content="1">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="format-detection" content="telephone=no" />
+  <style>
+         *,
+    *:before,
+    *:after {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    html,
+    body {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      font-family: Helvetica,sans-serif;
+      -webkit-text-size-adjust: none
+    }
+    
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0
+    }
+
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 100%
+    }
+
+    li,ol,ul {
+      list-style: none
+    }
+
+    em,i {
+      font-style: normal
+    }
+
+    img {
+      border: none
+    }
+
+    img,input {
+      vertical-align: middle
+    }
+
+    body {
+      color: #999;
+      font-size: 14px;
+      font-family: arial
+    }
+
+    a {
+      color: #000;
+      text-decoration: none
+    }
+
+    a,html {
+      -webkit-tap-highlight-color: transparent
+    }
+
+    input.fixAKeyboard:focus,textarea.fixAndroidKeyboard:focus {
+      -webkit-tap-highlight-color: rgba(255,255,255,0);
+      -webkit-user-modify: read-write-plaintext-only
+    }
+
+    .noscroll {
+      position: absolute;
+      height: 100%;
+      overflow: hidden
+    }
+
+    .clearfix:after {
+      display: block;
+      content: '';
+      clear: both;
+      visibility: hidden
+    }
+
+    .hidden {
+      display: none
+    }
+  </style>
+  <script>
+    var __supportsES6 = (function() {
+      try {
+        new Function("(a = 0) => a");
+        new Function("let a = {...{}}");
+        new Function("(function(a){for(let a = 1; a < 2; a++){}})(1)"); // IOS10
+        new Function("var a = async function() { return ''}");
+        return true;
+      } catch(err) {
+        return false;
+      }
+    })();
+  </script>
+</head>
+<body data-spm="spmB">
+  <script src="//g.alicdn.com/??mtb/lib-promise/3.1.1/polyfillB.js,mtb/lib-mtop/2.4.14/mtop.js"></script>
+  <div id="chimeraPage">
+    <script>
+      !function(e){var t={};function n(r){if(t[r])return t[r].exports;var i=t[r]={i:r,l:!1,exports:{}};return e[r].call(i.exports,i,i.exports,n),i.l=!0,i.exports}n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)n.d(r,i,function(t){return e[t]}.bind(null,i));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p=".package",n(n.s=4)}({4:function(e,t){Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(){var e,t=window,n=t.document,r=n.documentElement,i=n.querySelector('meta[name="viewport"]'),a=n.querySelector('meta[name="flexible"]'),o=0,l=0;if(i){console.warn("将根据已有的meta标签来设置缩放比例");var u=i.getAttribute("content").match(/initial-scale=([\d.]+)/);u&&(l=parseFloat(u[1]),o=parseInt(1/l))}else if(a){var c=a.getAttribute("content");if(c){var d=c.match(/initial-dpr=([\d.]+)/),f=c.match(/maximum-dpr=([\d.]+)/);d&&(o=parseFloat(d[1]),l=parseFloat((1/o).toFixed(2))),f&&(o=parseFloat(f[1]),l=parseFloat((1/o).toFixed(2)))}}if(!o&&!l){var s=t.navigator.appVersion.match(/iphone/gi),p=t.devicePixelRatio;l=1/(o=s?p>=3&&(!o||o>=3)?3:p>=2&&(!o||o>=2)?2:1:1)}if(r.setAttribute("data-dpr",o),!i)if((i=n.createElement("meta")).setAttribute("name","viewport"),i.setAttribute("content","initial-scale="+l+", maximum-scale="+l+", minimum-scale="+l+", user-scalable=no"),r.firstElementChild)r.firstElementChild.appendChild(i);else{var m=n.createElement("div");m.appendChild(i),n.write(m.innerHTML)}function v(){var e=r.clientWidth||r.getBoundingClientRect().width,t=e/750*100;r.style.fontSize=t+"px",window.__global_rem_unit__=e/750}var b="orientationchange"in window?"orientationchange":"resize";t.addEventListener(b,function(){clearTimeout(e),e=setTimeout(v,300)},!1),t.addEventListener("pageshow",function(t){t.persisted&&(clearTimeout(e),e=setTimeout(v,300))},!1),v()}(),e.exports=t.default}});
+    </script>
+    <section id="content" style="min-height: 100vh;">
+      <div class="chimera-page"></div>
+      <div class="client-ssr-page"><!-- __client_ssr_html --></div>
+    </section>
+  </div>
+  <!-- 开启 just dev 时，该 demo.init.js 会实时编译，如需线上调试，也可代理到 此 build 目录，实时线上调试 -->
+  <script src="index.js"></script>
+</body>
+</html>

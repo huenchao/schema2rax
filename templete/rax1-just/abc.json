@@ -1,0 +1,11 @@
+{
+  "name": "udpl-test11",
+  "group": "cmod",
+  "version": "@BRANCH@",
+  "builder": "@ali/builder-b2b-mod",
+  "author": "ruiwang.wr",
+  "options": {
+    "component": true,
+    "ocms": true
+  }
+}
